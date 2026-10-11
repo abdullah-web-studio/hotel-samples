@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alamo Guest House — Glasgow</title><meta name="description" content="Alamo Guest House, Glasgow — Stay in Glasgow's charming West End">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#22201d;--muted:#6b6660;--bg:#faf8f5;--card:#fff;--accent:#6e1423;--accent2:#c9a227;--line:#e7e1d8}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.65}
+.sans{font-family:'Helvetica Neue',Arial,sans-serif}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:1.45rem;letter-spacing:.04em;color:var(--accent);font-weight:bold;text-decoration:none}
+.logo small{display:block;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif;font-weight:normal}
+nav.links a{margin-left:18px;color:var(--ink);text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.92rem}
+nav.links a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff!important;padding:11px 22px;border-radius:30px;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.92rem;border:none;cursor:pointer}
+.btn.light{background:transparent;border:1.5px solid #fff}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:#111}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.62))}
+.hero-in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:56px 20px;width:100%;color:#fff}
+.hero-in h1{font-size:clamp(2.2rem,5.5vw,4rem);line-height:1.08;font-weight:normal;max-width:760px}
+.hero-in p{font-size:1.15rem;max-width:620px;margin:14px 0 22px;color:#f3efe9}
+.badge{display:inline-block;background:var(--accent2);color:#1c1a17;padding:5px 14px;border-radius:20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+section{max-width:1180px;margin:0 auto;padding:64px 20px}
+h2{font-size:2rem;font-weight:normal;color:var(--accent);margin-bottom:8px}
+.sub{color:var(--muted);max-width:680px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{width:100%;height:230px;object-fit:cover;display:block}
+.card .pad{padding:20px}
+.card h3{font-size:1.25rem;font-weight:normal;margin-bottom:6px}
+.rate{display:inline-block;margin-top:12px;background:#f3eee6;color:var(--accent);padding:5px 14px;border-radius:16px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.85rem;font-weight:bold}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal figure{border-radius:12px;overflow:hidden;position:relative}
+.gal img{width:100%;height:210px;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;padding:22px 12px 8px;font-size:.88rem;font-family:'Helvetica Neue',Arial,sans-serif}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.split img{width:100%;height:340px;object-fit:cover;border-radius:14px}
+@media(max-width:760px){.split{grid-template-columns:1fr}nav.links{display:none}}
+form{display:grid;gap:12px;max-width:640px}
+input,select,textarea{padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;width:100%;background:#fff}
+.thanks{display:none;background:#eef6ee;border:1px solid #bcd8bc;padding:18px;border-radius:10px;font-family:'Helvetica Neue',Arial,sans-serif}
+footer{background:#1d1a17;color:#cfc8bd;padding:44px 20px;font-family:'Helvetica Neue',Arial,sans-serif}
+footer .in{max-width:1180px;margin:0 auto;display:grid;gap:8px}
+footer a{color:#fff}
+#chatBtn{position:fixed;right:20px;bottom:20px;z-index:99;background:var(--accent);color:#fff;border:none;border-radius:30px;padding:14px 20px;font-size:.95rem;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3);font-family:'Helvetica Neue',Arial,sans-serif}
+#chatPanel{position:fixed;right:20px;bottom:78px;z-index:99;width:min(350px,92vw);background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.32);display:none;overflow:hidden;font-family:'Helvetica Neue',Arial,sans-serif}
+#chatPanel.open{display:block}
+#chatPanel .head{background:var(--accent);color:#fff;padding:14px 16px;font-weight:bold}
+#chatPanel .body{padding:14px 16px;max-height:60vh;overflow:auto}
+.chip{display:inline-block;border:1px solid var(--accent);color:var(--accent);border-radius:18px;padding:6px 12px;margin:0 6px 8px 0;font-size:.82rem;cursor:pointer;background:#fff}
+.chip:hover{background:var(--accent);color:#fff}
+#chatAnswer{background:#f6f2ec;border-radius:10px;padding:10px 12px;font-size:.88rem;margin:8px 0 12px;display:none}
+.faq{font-size:.86rem;color:#444;border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+.faq b{color:var(--ink)}
+.chat-actions{display:flex;gap:8px;margin-top:12px}
+.chat-actions a{flex:1;text-align:center;padding:10px;border-radius:9px;text-decoration:none;font-size:.88rem}
+.call{background:var(--accent);color:#fff}.mail{background:#f0ebe3;color:var(--ink)}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#">Alamo Guest House<small>Glasgow · Guest House</small></a>
+<nav class="links"><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a class="btn" href="#book">Book Direct</a></nav></div></header>
+<div class="hero"><img src="assets/hero.jpg" alt="Kelvingrove Art Gallery and Museum, Glasgow"><div class="hero-in">
+<span class="badge">Victorian Boutique Luxury · Rated 4.9 on Google</span><h1>Stay in Glasgow's Charming West End</h1><p>Alamo Guest House is a Victorian boutique hideaway in Glasgow's West End — antique detail, deep reds and golds, and views towards Kelvingrove Park.</p>
+<a class="btn" href="#book">Check Availability</a> <a class="btn light" href="#rooms">Explore Rooms</a></div></div>
+
+<section id="welcome"><div class="split"><div><h2>Welcome to Alamo Guest House</h2>
+<p>Alamo Guest House brings Victorian grandeur back to life in Glasgow's charming West End. Inside, expect vintage and bespoke antique décor, rich dark-red and gold tones, and rooms that feel more like a private residence than a hotel — which is why guests rate us 4.9 on Google.</p><p style="margin-top:12px">Choose from three indulgent suites with super-king beds and freestanding baths, superior rooms, classic and deluxe kings, or a standard double — each one individually dressed with antiques and character. Kelvingrove Park is on the doorstep for morning walks beneath the trees.</p></div>
+<img src="assets/terrace.jpg" alt="A Victorian terrace street in Glasgow's West End"></div></section>
+
+<section id="rooms" style="padding-top:10px"><h2>Our Rooms</h2><p class="sub">Suites, superior rooms and king rooms — every rate is confirmed personally: rates on request.</p>
+<div class="grid"><div class="card"><img src="assets/deluxe-king.jpg" alt="The Suites"><div class="pad"><h3>The Suites</h3><p>Three indulgent suites with a super-king bed and a freestanding bath — the Alamo at its most luxurious, dressed with bespoke antiques.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/superior.jpg" alt="Superior Rooms"><div class="pad"><h3>Superior Rooms</h3><p>Generous, elegant rooms with gold detailing, tall windows and a calm, luxurious feel.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/standard-double.jpg" alt="Classic King"><div class="pad"><h3>Classic King</h3><p>A classic king bed in a warm, traditionally styled room — timeless West End comfort.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/classic-king.jpg" alt="Deluxe King"><div class="pad"><h3>Deluxe King</h3><p>Our signature dark-red and gold palette: a dramatic tufted bed, antique touches and pure boutique drama.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/double2.jpg" alt="Standard Double"><div class="pad"><h3>Standard Double</h3><p>A bright, comfortable double room with a desk and seating — everything you need, beautifully done.</p><span class="rate">Rates on request</span></div></div></div></section>
+
+<section id="gallery" style="padding-top:10px"><h2>Gallery</h2><p class="sub">Victorian streets, antique interiors and the green heart of the West End.</p>
+<div class="gal"><figure><img src="assets/terrace.jpg" alt="A Victorian terrace street, West End"><figcaption>A Victorian terrace street, West End</figcaption></figure>
+<figure><img src="assets/suite.jpg" alt="Freestanding bath in our suites"><figcaption>Freestanding bath in our suites</figcaption></figure>
+<figure><img src="assets/park.jpg" alt="Kelvingrove Park"><figcaption>Kelvingrove Park</figcaption></figure>
+<figure><img src="assets/university.jpg" alt="University of Glasgow tower"><figcaption>University of Glasgow tower</figcaption></figure>
+<figure><img src="assets/breakfast.jpg" alt="Breakfast at the Alamo"><figcaption>Breakfast at the Alamo</figcaption></figure>
+<figure><img src="assets/superior.jpg" alt="Superior Room detail"><figcaption>Superior Room detail</figcaption></figure></div></section>
+
+<section id="location" style="padding-top:10px"><div class="split"><img src="assets/park.jpg" alt="Kelvingrove Park, Glasgow">
+<div><h2>Exploring Glasgow</h2><p>The West End is Glasgow at its most charming: leafy Victorian terraces, Kelvingrove Park and the magnificent Kelvingrove Art Gallery and Museum, with the University of Glasgow's great tower watching over it all. Byres Road and Ashton Lane bring cafés, bars and independent shops, while the city centre is an easy journey away.</p></div></div></section>
+
+<section id="contact" style="padding-top:10px"><h2>Contact Us</h2>
+<p class="sub">Book direct for a personal welcome — we are always happy to help you plan your stay.</p>
+<p style="font-size:1.1rem">Phone: <a href="tel:+441413392395">0141 339 2395</a><br>Email: <a href="mailto:info@alamoguesthouse.com">info@alamoguesthouse.com</a></p></section>
+
+<section id="book" style="padding-top:10px"><h2>Booking Enquiry</h2>
+<p class="sub">Send us your dates and we will confirm availability and rates personally. Rates on request.</p>
+<form id="bookForm"><input required placeholder="Your name"><input required type="email" placeholder="Your email">
+<input required type="tel" placeholder="Your phone"><label class="sans" style="font-size:.85rem;color:var(--muted)">Check-in date</label><input required type="date">
+<label class="sans" style="font-size:.85rem;color:var(--muted)">Check-out date</label><input required type="date">
+<select><option>Suite</option><option>Superior Room</option><option>Classic King</option><option>Deluxe King</option><option>Standard Double</option></select><textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
+<button class="btn" type="submit">Send Enquiry</button></form>
+<div class="thanks" id="thanks">Thank you — your enquiry has been noted. This is a demonstration website, so no message has been sent; on the live site, Alamo Guest House would reply to confirm availability and rates.</div></section>
+
+<footer><div class="in"><div style="font-size:1.15rem;color:#fff">Alamo Guest House — Glasgow</div>
+<div>Phone: <a href="tel:+441413392395">0141 339 2395</a> · Email: <a href="mailto:info@alamoguesthouse.com">info@alamoguesthouse.com</a></div>
+<div>Stay in Glasgow's charming West End</div><div style="margin-top:10px;font-size:.85rem">Sample website prepared for Alamo Guest House — demonstration only.</div></div></footer>
+
+<button id="chatBtn" onclick="toggleChat()">💬 Guest Support</button>
+<div id="chatPanel"><div class="head">Guest Support — Alamo Guest House</div><div class="body">
+<p style="font-size:.9rem;margin-bottom:10px">Hello! Tap a question, or contact the house directly below.</p>
+<button class="chip" onclick="ask('What time is check-in?')">What time is check-in?</button>
+<button class="chip" onclick="ask('Do you serve breakfast?')">Do you serve breakfast?</button>
+<button class="chip" onclick="ask('Is parking available?')">Is parking available?</button>
+<button class="chip" onclick="ask('Can I book direct?')">Can I book direct?</button><div id="chatAnswer"></div>
+<div class="faq"><p style="margin-bottom:8px"><b>Quick answers</b></p><p><b>What time is check-in?</b><br>We confirm check-in personally when you book — call 0141 339 2395 and we will plan your arrival with you.</p>
+<p><b>Do you serve breakfast?</b><br>Yes, breakfast is part of the Alamo morning ritual. Tell us about any preferences when you book and we will look after you.</p>
+<p><b>Is parking available?</b><br>Please call us on 0141 339 2395 for the latest advice on parking near the house in the West End.</p></div>
+<div class="chat-actions"><a class="call" href="tel:+441413392395">📞 Call Us</a><a class="mail" href="mailto:info@alamoguesthouse.com">✉️ Email Us</a></div>
+<p style="font-size:.8rem;color:#777;margin-top:10px">Phone: 0141 339 2395<br>Email: info@alamoguesthouse.com</p>
+</div></div>
+<script>
+function toggleChat(){document.getElementById('chatPanel').classList.toggle('open')}
+var {
+'What time is check-in?': 'We confirm check-in personally when you book — call 0141 339 2395 and we will plan your arrival with you.',
+'Do you serve breakfast?': 'Yes, breakfast is part of the Alamo morning ritual. Tell us about any preferences when you book and we will look after you.',
+'Is parking available?': 'Please call us on 0141 339 2395 for the latest advice on parking near the house in the West End.',
+'Can I book direct?': 'Yes — direct is best. Call 0141 339 2395 or email info@alamoguesthouse.com and we will confirm availability and rates personally.'
+}={{
+'What time is check-in?': 'We confirm check-in personally when you book — call 0141 339 2395 and we will plan your arrival with you.',
+'Do you serve breakfast?': 'Yes, breakfast is part of the Alamo morning ritual. Tell us about any preferences when you book and we will look after you.',
+'Is parking available?': 'Please call us on 0141 339 2395 for the latest advice on parking near the house in the West End.',
+'Can I book direct?': 'Yes — direct is best. Call 0141 339 2395 or email info@alamoguesthouse.com and we will confirm availability and rates personally.'
+}};
+function ask(q){var a=document.getElementById('chatAnswer');a.style.display='block';a.innerHTML='<b>'+q+'</b><br>'+{
+'What time is check-in?': 'We confirm check-in personally when you book — call 0141 339 2395 and we will plan your arrival with you.',
+'Do you serve breakfast?': 'Yes, breakfast is part of the Alamo morning ritual. Tell us about any preferences when you book and we will look after you.',
+'Is parking available?': 'Please call us on 0141 339 2395 for the latest advice on parking near the house in the West End.',
+'Can I book direct?': 'Yes — direct is best. Call 0141 339 2395 or email info@alamoguesthouse.com and we will confirm availability and rates personally.'
+}[q];}
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('thanks').style.display='block';});
+</script></body></html>
