@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pueblo Bonito Inn — Santa Fe, New Mexico</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#FBF6EE;color:#2b2b2b;line-height:1.65}
+h1,h2,h3{font-family:Georgia,'Playfair Display','Times New Roman',serif;color:#6E3B26;line-height:1.25}
+header{background:#6E3B26;color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+header .brand{font-family:Georgia,'Playfair Display','Times New Roman',serif;font-size:1.35rem;letter-spacing:.04em}
+header nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:.95rem;letter-spacing:.03em}
+header nav a:hover{color:#C08552}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+.hero-text{background:#6E3B26;color:#fff;padding:72px 8%;display:flex;flex-direction:column;justify-content:center}
+.hero-text h1{color:#fff;font-size:2.5rem;margin-bottom:14px}
+.hero-text .tag{color:#C08552;font-style:italic;font-family:Georgia,'Playfair Display','Times New Roman',serif;font-size:1.15rem;margin-bottom:18px}
+.hero-text p{margin-bottom:26px;max-width:46ch}
+.hero img{width:100%;height:100%;object-fit:cover;display:block;max-height:640px}
+.btn{display:inline-block;background:#C08552;color:#fff;padding:13px 30px;border-radius:30px;text-decoration:none;font-weight:600;letter-spacing:.03em;align-self:flex-start}
+.btn:hover{opacity:.88}
+section{padding:64px 6%;max-width:1180px;margin:0 auto}
+section h2{font-size:1.9rem;margin-bottom:10px}
+.rule{width:64px;height:3px;background:#C08552;margin:14px 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:24px}
+.card-body h3{margin-bottom:8px;font-size:1.25rem}
+.price{color:#C08552;font-weight:700;margin-top:12px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.gallery figure{border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.gallery img{width:100%;height:230px;object-fit:cover;display:block}
+.gallery figcaption{padding:14px 18px;font-family:Georgia,'Playfair Display','Times New Roman',serif;font-style:italic;color:#6E3B26}
+.band{background:#6E3B26;color:#fff}
+.band h2{color:#fff} .band .rule{background:#C08552}
+.band a{color:#C08552}
+form{background:#fff;padding:30px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.08);max-width:640px}
+label{display:block;margin:14px 0 5px;font-weight:600;font-size:.92rem}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font-family:inherit}
+button.submit{margin-top:20px;background:#6E3B26;color:#fff;border:none;padding:13px 32px;border-radius:30px;font-weight:600;cursor:pointer}
+#thankYou{display:none;background:#fff;padding:30px;border-radius:12px;max-width:640px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+footer{background:#6E3B26;color:#e8e2d8;padding:38px 6%;text-align:center;font-size:.92rem}
+footer .note{margin-top:10px;font-style:italic;color:#C08552}
+#chatBtn{position:fixed;right:22px;bottom:22px;background:#C08552;color:#fff;border:none;border-radius:30px;padding:14px 22px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:50}
+#chatPanel{display:none;position:fixed;right:22px;bottom:78px;width:330px;max-width:92vw;background:#fff;border-radius:14px;box-shadow:0 14px 44px rgba(0,0,0,.3);z-index:50;overflow:hidden}
+#chatPanel .chead{background:#6E3B26;color:#fff;padding:15px 18px;font-family:Georgia,'Playfair Display','Times New Roman',serif}
+#chatBody{padding:16px 18px;max-height:300px;overflow-y:auto;font-size:.93rem}
+.chip{display:inline-block;border:1px solid #C08552;color:#6E3B26;border-radius:20px;padding:6px 13px;margin:0 6px 8px 0;cursor:pointer;background:#fff;font-size:.85rem}
+.ans{background:#FBF6EE;border-left:3px solid #C08552;padding:10px 12px;margin:10px 0;border-radius:6px}
+.cactions{padding:0 18px 16px;display:flex;gap:10px}
+.cactions a{flex:1;text-align:center;background:#6E3B26;color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-size:.9rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.hero img{max-height:340px}header nav a{margin-left:12px}}
+</style></head>
+<body>
+<header><div class="brand">Pueblo Bonito Inn</div><nav><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a></nav></header>
+<div class="hero"><div class="hero-text"><h1>Pueblo Bonito Inn</h1><div class="tag">A historic adobe inn in the heart of Santa Fe</div><p>An original 1800s adobe compound between the Plaza and the Railyard — handcrafted New Mexican furniture, viga ceilings and cosy kiva fireplaces.</p><a class="btn" href="#contact">Check Availability</a></div><img src="assets/hero.jpg" alt="Pueblo Bonito Inn lounge with Southwestern furnishings"></div>
+<section id="welcome"><h2>Welcome</h2><div class="rule"></div><p>Pueblo Bonito Inn, at 138 West Manhattan Avenue, has welcomed Santa Fe travellers for over 30 years. The inn is housed in an original 1800s adobe estate, thoughtfully restored, with handcrafted New Mexican furniture, exposed adobe walls and wood-beamed ceilings. Guests enjoy complimentary tea, coffee and snacks, free WiFi and on-site parking — and the best rate, always, when booking direct.</p></section>
+<section id="rooms"><h2>Rooms &amp; Rates</h2><div class="rule"></div><div class="grid"><article class="card"><img src="assets/room-king.jpg" alt="King Guestroom at Pueblo Bonito Inn"><div class="card-body"><h3>King Guestroom</h3><p>Our most spacious room, with a plush king bed, handcrafted New Mexican furniture, exposed adobe or wood-beamed ceilings, and in many rooms a traditional kiva fireplace.</p><p class="price">Published range: $194-$211 per night</p></div></article><article class="card"><img src="assets/room-queen.jpg" alt="Queen Guestroom at Pueblo Bonito Inn"><div class="card-body"><h3>Queen Guestroom</h3><p>Warm adobe charm for solo travellers and couples, with authentic furnishings, curated local art, and wood-burning fireplaces in some rooms.</p><p class="price">Published range: $194-$211 per night</p></div></article><article class="card"><img src="assets/room-kitchenette.jpg" alt="Kitchenette Rooms at Pueblo Bonito Inn"><div class="card-body"><h3>Kitchenette Rooms</h3><p>Extra flexibility for longer stays: a queen or king bed, a separate living room and a private kitchen nook with fridge, microwave and sink.</p><p class="price">Published range: $194-$211 per night</p></div></article></div><p style="margin-top:22px">Rates shown are the published guide range of $194-$211 per night. Booking direct brings the best rate, flexible cancellation and complimentary parking.</p></section>
+<section id="gallery"><h2>Gallery</h2><div class="rule"></div><div class="gallery"><figure><img src="assets/gallery-courtyard.jpg" alt="Santa Fe at dusk, moments from the inn"><figcaption>Santa Fe at dusk, moments from the inn</figcaption></figure></div></section>
+<div class="band"><section id="location"><h2>Location — Santa Fe, New Mexico</h2><div class="rule"></div><p>Between the Santa Fe Plaza and the Railyard District — about half a mile to each, adjacent to the State Capitol, and steps from some of Santa Fe's best restaurants.</p></section></div>
+<section id="contact"><h2>Contact &amp; Booking Enquiry</h2><div class="rule"></div>
+<p style="margin-bottom:20px">138 West Manhattan Avenue, Santa Fe, NM 87501<br>Call: <a href="tel:5059848001">505-984-8001</a> &nbsp;·&nbsp; Email: <a href="mailto:hello@pueblobonitoinn.com">hello@pueblobonitoinn.com</a></p>
+<form id="inquiryForm" onsubmit="return submitInquiry(event)"><label>Your name</label><input required type="text" name="name"><label>Email</label><input required type="email" name="email"><label>Check-in</label><input type="date" name="in"><label>Check-out</label><input type="date" name="out"><label>Room preference</label><select name="room"><option>King Guestroom</option><option>Queen Guestroom</option><option>Kitchenette Room</option></select><label>Message</label><textarea rows="3" name="msg"></textarea><button class="submit" type="submit">Send Enquiry</button></form>
+<div id="thankYou"><h3>Thank you!</h3><p>Your enquiry has been noted in this demonstration. The inn will reply using the contact details you provided.</p></div></section>
+<footer><div>Pueblo Bonito Inn · Santa Fe, New Mexico · 505-984-8001 · hello@pueblobonitoinn.com</div><div class="note">Sample website prepared for Pueblo Bonito Inn — demonstration only.</div></footer>
+<button id="chatBtn" onclick="toggleChat()">Guest Support</button>
+<div id="chatPanel"><div class="chead">Guest Support — Pueblo Bonito Inn</div><div id="chatBody"><p>Welcome! Choose a topic, or reach the inn directly below.</p><div style="margin-top:10px"><button class="chip" onclick="askChat('rates')">Rates</button><button class="chip" onclick="askChat('rooms')">Rooms</button><button class="chip" onclick="askChat('location')">Location</button><button class="chip" onclick="askChat('contact')">Contact</button></div></div><div class="cactions"><a href="tel:5059848001">Call the Inn</a><a href="mailto:hello@pueblobonitoinn.com">Email the Inn</a></div></div>
+<script>
+function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display==='block')?'none':'block';}
+var answers={"rates":"Our published guide range is $194 to $211 per night. Book direct for our best rate, flexible cancellation and complimentary parking.","rooms":"Choose a King Guestroom, a Queen Guestroom, or a Kitchenette Room with a separate living room and kitchen nook.","location":"We are at 138 West Manhattan Avenue, Santa Fe, between the Plaza and the Railyard District, beside the State Capitol.","contact":"Call us on 505-984-8001 or email hello@pueblobonitoinn.com. Use the Call and Email buttons below."};
+function askChat(k){var b=document.getElementById('chatBody');var d=document.createElement('div');d.className='ans';d.textContent=answers[k]||'';b.appendChild(d);b.scrollTop=b.scrollHeight;}
+function submitInquiry(e){e.preventDefault();document.getElementById('inquiryForm').style.display='none';document.getElementById('thankYou').style.display='block';return false;}
+</script>
+</body></html>
