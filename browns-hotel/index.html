@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Browns Hotel — Dartmouth, Devon</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box} body{font-family:'Jost',sans-serif;color:#2b2b2b;background:#fdfbf7}
+h1,h2,h3{font-family:'Playfair Display',serif;color:#12333d}
+.topbar{background:#12333d;color:#fff;text-align:center;padding:9px;font-size:14px;letter-spacing:.06em}
+.topbar a{color:#f2c894;text-decoration:none;font-weight:600}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6%;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.07);position:sticky;top:0;z-index:50}
+.logo{font-family:'Playfair Display',serif;font-size:26px;color:#12333d} .logo span{color:#b3793f}
+nav ul{display:flex;gap:26px;list-style:none} nav a{text-decoration:none;color:#333;font-weight:500}
+.btn{background:#b3793f;color:#fff!important;padding:11px 22px;border-radius:30px}
+.hero{height:82vh;background:linear-gradient(rgba(10,25,30,.38),rgba(10,25,30,.5)),url('assets/hero.jpg') center/cover;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:20px}
+.hero h1{color:#fff;font-size:clamp(38px,6vw,64px)} .hero p{font-size:20px;margin:14px auto;max-width:640px}
+section{padding:70px 6%;max-width:1200px;margin:auto} h2{font-size:36px;margin-bottom:16px;text-align:center}
+.sub{text-align:center;color:#666;max-width:700px;margin:0 auto 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.08)}
+.card img{width:100%;height:220px;object-fit:cover} .card div{padding:22px} .price{color:#b3793f;font-weight:600;font-size:18px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px} .gal img{width:100%;height:230px;object-fit:cover;border-radius:12px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center} .about img{width:100%;border-radius:14px}
+.contact{background:#12333d;color:#fff;text-align:center;border-radius:16px;padding:48px 24px} .contact h2{color:#fff} .contact a{color:#f2c894}
+footer{text-align:center;padding:26px;color:#777;font-size:14px}
+.wa{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:40px;text-decoration:none;font-weight:600;box-shadow:0 8px 22px rgba(0,0,0,.25);z-index:99}
+@media(max-width:760px){.about{grid-template-columns:1fr} nav ul{display:none}}
+</style></head><body>
+<div class="topbar">Browns Hotel · Dartmouth, Devon &nbsp;|&nbsp; Call us: <a href="tel:+441803832572">01803 832 572</a> &nbsp;|&nbsp; <a href="mailto:enquiries@brownshoteldartmouth.co.uk">enquiries@brownshoteldartmouth.co.uk</a></div>
+<nav><div class="logo">Browns <span>Hotel</span></div><ul><li><a href="#about">About</a></li><li><a href="#rooms">Rooms</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li><li><a class="btn" href="#contact">Book Direct</a></li></ul></nav>
+<header class="hero"><div><h1>Browns Hotel</h1><p>A stylish boutique townhouse hotel, restaurant and bar — just 200 yards from the Dartmouth waterfront.</p><a class="btn" href="#rooms" style="text-decoration:none">Explore Our Rooms</a></div></header>
+<section id="about"><div class="about"><img src="assets/bistro.jpg" alt="Browns Hotel"><div><h2 style="text-align:left">Welcome to Browns Hotel</h2><p>Just 200 yards from the waterfront, at the heart of picturesque Dartmouth, Browns is a small, stylish townhouse hotel, restaurant and bar. Sumptuous decor runs through the ground-floor reception, bar and restaurant, with nine smart, individually designed en-suite bedrooms above — the ideal base for the River Dart, the South Hams coastline, weddings and special celebrations.</p></div></div></section>
+<section id="rooms"><h2>Our Rooms</h2><p class="sub">Nine individually designed en-suite bedrooms. Room rates are not published as a static tariff — live prices and availability are shown in our online booking, with midweek discounts all year, low-season weekend offers and a full breakfast included in every rate.</p><div class="grid"><div class="card"><img src="assets/blue-room.jpg" alt="The Blue Room — Premium"><div><h3>The Blue Room — Premium</h3><p>Our premium room: a stylish, individual en-suite double with luxury touches, designer lighting and a power shower.</p><p class="price">Rates on request — see live online booking</p></div></div><div class="card"><img src="assets/green-room.jpg" alt="The Green Room — Premium"><div><h3>The Green Room — Premium</h3><p>A characterful premium en-suite double, individually designed with stylish furnishings and a flat-screen TV.</p><p class="price">Rates on request — see live online booking</p></div></div><div class="card"><img src="assets/classic-room.jpg" alt="Classic Rooms"><div><h3>Classic Rooms</h3><p>Stylish, good-sized en-suite doubles — some with sofas, all with luxury touches, power showers and good WiFi. Dog friendly.</p><p class="price">Rates on request — see live online booking</p></div></div><div class="card"><img src="assets/comfort-room.jpg" alt="Comfort Rooms"><div><h3>Comfort Rooms</h3><p>Comfy, individual en-suite doubles with somewhere to sit and enjoy a coffee — bath with shower over or walk-in shower. Dog friendly.</p><p class="price">Rates on request — see live online booking</p></div></div><div class="card"><img src="assets/breakfast.jpg" alt="Breakfast Included"><div><h3>Breakfast Included</h3><p>A full choice breakfast is included in every room rate, cooked to order with local produce where possible.</p><p class="price">Included in all room rates</p></div></div><div class="card"><img src="assets/bar.jpg" alt="Wine Bar &amp; Gallery"><div><h3>Wine Bar &amp; Gallery</h3><p>Our bar is open daily for coffee, wine, cocktails and light meals, with a changing display of local artists' work.</p><p class="price">Open daily</p></div></div></div></section>
+<section id="gallery"><h2>Gallery</h2><div class="gal"><img src="assets/front.jpg" alt="Browns Hotel Dartmouth"><img src="assets/dartmouth-view.jpg" alt="Browns Hotel Dartmouth"><img src="assets/bar.jpg" alt="Browns Hotel Dartmouth"><img src="assets/bistro.jpg" alt="Browns Hotel Dartmouth"><img src="assets/classic-room.jpg" alt="Browns Hotel Dartmouth"><img src="assets/comfort-room.jpg" alt="Browns Hotel Dartmouth"></div></section>
+<section id="contact"><div class="contact"><h2>Book Direct &amp; Save</h2><p>Call us on <a href="tel:+441803832572">01803 832 572</a><br>Email: <a href="mailto:enquiries@brownshoteldartmouth.co.uk">enquiries@brownshoteldartmouth.co.uk</a><br>27–29 Victoria Road, Dartmouth, Devon, TQ6 9RT</p></div></section>
+<footer>© Browns Hotel, Dartmouth, Devon — Sample website concept</footer>
+<a class="wa" href="https://wa.me/441803832572" target="_blank">💬 Guest Support — Chat with us</a>
+</body></html>
