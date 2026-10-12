@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Belfry Whitby — Stylish B&B in the Heart of Whitby</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--slate:#2e3a42;--brick:#9a4a32;--cream:#f7f2ec;--gold:#c8a165}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Inter,system-ui,sans-serif;color:#333;background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:"Playfair Display",serif;color:var(--slate)}
+.topbar{background:var(--slate);color:#fff;text-align:center;padding:8px;font-size:14px}.topbar a{color:var(--gold);text-decoration:none}
+header{background:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:10}
+.logo{font-family:"Playfair Display",serif;font-size:28px;color:var(--slate)}.logo span{color:var(--brick)}
+nav a{margin:0 12px;color:var(--slate);text-decoration:none;font-weight:500}
+.hero{height:82vh;background:url('assets/hero-exterior.jpg') center/cover;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-box{background:rgba(46,58,66,.82);color:#fff;padding:36px 44px;border-radius:6px;max-width:720px;margin:0 16px}.hero-box h1{color:#fff;font-size:46px}.hero-box p{color:var(--gold);font-size:19px;margin:10px 0 20px}
+.btn{background:var(--brick);color:#fff;padding:13px 28px;border-radius:30px;text-decoration:none;font-weight:600;display:inline-block}
+section{padding:64px 6%;max-width:1200px;margin:auto}h2{font-size:34px;margin-bottom:16px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-top:28px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08)}.card img{width:100%;height:220px;object-fit:cover}.card div{padding:20px}.price{color:var(--brick);font-weight:600}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:24px}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}@media(max-width:800px){.about{grid-template-columns:1fr}.hero-box h1{font-size:32px}}
+.about img{width:100%;border-radius:10px}
+.contact{background:var(--slate);color:#fff;text-align:center;border-radius:12px;padding:44px 20px}.contact h2{color:#fff}.contact a{color:var(--gold)}
+footer{text-align:center;padding:24px;font-size:14px;color:#666}
+.chat{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:30px;text-decoration:none;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:99}
+</style></head><body>
+<div class="topbar">📞 <a href="tel:01947600860">01947 600860</a> &nbsp;|&nbsp; ✉️ <a href="mailto:info@thebelfrywhitby.co.uk">info@thebelfrywhitby.co.uk</a> &nbsp;|&nbsp; 2 Church Square, Whitby YO21 3EG</div>
+<header><div class="logo">The Belfry <span>Whitby</span></div><nav><a href="#about">About</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav></header>
+<div class="hero"><div class="hero-box"><h1>The Belfry Whitby</h1><p>Stylish B&amp;B in the Heart of Whitby</p><a class="btn" href="#rooms">Discover Our Rooms</a></div></div>
+<section id="about"><h2>Welcome to The Belfry</h2><div class="about"><img src="assets/dining-room.jpg" alt="The Belfry dining room"><div><p>A beautifully renovated Victorian home on Whitby's grand West Cliff, hosted by Phill &amp; Sophie. Just a short stroll from the sandy beach, the town centre and the historic harbour.</p><p style="margin-top:12px">Start the day with a freshly cooked Yorkshire breakfast made with local ingredients, then unwind in the guest lounge. Every guest receives a complimentary parking permit for their stay.</p><p style="margin-top:12px">Our eight spacious en-suite rooms look out over St Hilda's Church or towards the sea — individually styled, with comfortable beds, flat-screen TVs and free Wi-Fi throughout.</p></div></div></section>
+<section id="rooms"><h2>Our Rooms</h2><p style="text-align:center">All rooms en-suite · Breakfast included · <strong>Rates on request</strong> — call <a href="tel:01947600860">01947 600860</a> for the best direct price</p>
+<div class="grid">
+<div class="card"><img src="assets/room-luxury-suite.jpg"><div><h3>Luxury Suite</h3><p>King-size bed, sofa and a stunning en-suite shower room.</p><p class="price">Rates on request</p></div></div>
+<div class="card"><img src="assets/room-premier-suite.jpg"><div><h3>Premier Suite</h3><p>King-size bed, freestanding bath, dressing table, sofa and en-suite shower room. Third floor.</p><p class="price">Rates on request</p></div></div>
+<div class="card"><img src="assets/room-super-king.jpg"><div><h3>Super King / Twin Room</h3><p>Super king or twin set-up, en-suite shower room and sea view. Two rooms available.</p><p class="price">Rates on request</p></div></div>
+<div class="card"><img src="assets/room-family.jpg"><div><h3>Family Suite</h3><p>Sleeps three — king-size bed plus single bed, en-suite shower room.</p><p class="price">Rates on request</p></div></div>
+<div class="card"><img src="assets/room-king.jpg"><div><h3>King Room</h3><p>King-size bed, seating area and en-suite shower room.</p><p class="price">Rates on request</p></div></div>
+<div class="card"><img src="assets/room-double.jpg"><div><h3>Double Rooms</h3><p>Standard double bed and en-suite shower room. Two rooms available.</p><p class="price">Rates on request</p></div></div>
+<div class="card"><img src="assets/servants-quarters.jpg"><div><h3>The Servant's Quarters</h3><p>Self-catered apartment sleeping up to six across three bedrooms — perfect for a seaside getaway.</p><p class="price">Rates on request</p></div></div>
+</div></section>
+<section id="gallery"><h2>Gallery</h2><div class="gallery"><img src="assets/hero-exterior.jpg"><img src="assets/room-premier-suite.jpg"><img src="assets/dining-room.jpg"><img src="assets/room-luxury-suite.jpg"><img src="assets/servants-quarters.jpg"><img src="assets/room-super-king.jpg"></div></section>
+<section id="contact"><div class="contact"><h2>Contact The Belfry Whitby</h2><p style="margin:14px 0">2 Church Square, Whitby YO21 3EG<br>Phone: <a href="tel:01947600860">01947 600860</a><br>Email: <a href="mailto:info@thebelfrywhitby.co.uk">info@thebelfrywhitby.co.uk</a></p><a class="btn" href="tel:01947600860">Call to Book Direct</a></div></section>
+<footer>© The Belfry Whitby · 2 Church Square, Whitby YO21 3EG · 01947 600860</footer>
+<a class="chat" href="https://wa.me/441947600860" target="_blank">💬 Guest Support — Chat with us</a>
+</body></html>
